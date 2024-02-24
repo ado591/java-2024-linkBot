@@ -9,12 +9,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import java.util.List;
 import static org.mockito.Mockito.lenient;
 
 @ExtendWith(MockitoExtension.class)
 public abstract class CommandTest {
     @Mock
     protected UserManager userManager;
+
+    @Mock
+    protected List<Command> allCommands;
 
     @Mock
     protected Update update;
@@ -29,10 +33,12 @@ public abstract class CommandTest {
     protected Chat chat;
 
 
+
     @BeforeEach
     public void setUp() {
         lenient().when(update.message()).thenReturn(message);
         lenient().when(update.message().from()).thenReturn(user);
+        lenient().when(user.id()).thenReturn(666L);
         lenient().when(message.chat()).thenReturn(chat);
     }
 

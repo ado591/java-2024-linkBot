@@ -3,7 +3,6 @@ package edu.java.bot.commands;
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.messages.InfoMessage;
-import edu.java.bot.services.UserManager;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class Help implements Command {
-    private final List<Command> allComands;
+    private final List<Command> allCommands;
     private final CommandDescription info = CommandDescription.HELP;
 
     @Override
@@ -28,7 +27,7 @@ public class Help implements Command {
     public SendMessage execute(Update update) {
         StringBuilder response = new StringBuilder();
         response.append(InfoMessage.SUPPORTED_COMMANDS.getMessage());
-        for (Command botCommand: allComands) {
+        for (Command botCommand: allCommands) {
             response.append(botCommand.name());
             response.append(" : ").append(botCommand.description()).append("\n");
         }

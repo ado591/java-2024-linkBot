@@ -3,14 +3,14 @@ package edu.java.bot.services;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.messages.ErrorMessage;
 import edu.java.bot.messages.SuccessMessage;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 @Getter
 @RequiredArgsConstructor

@@ -9,19 +9,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 public class TrackTest extends CommandTest {
     @InjectMocks
-    private Track track;
+    private Track trackCommand;
 
     @Test
     @Override
     void commandNameTest() {
-        assertEquals(track.name(), CommandDescription.TRACK.getName());
+        assertEquals(trackCommand.name(), CommandDescription.TRACK.getName());
     }
 
     @Test
     @Override
     void commandDescriptionTest() {
-        assertEquals(track.description(), CommandDescription.TRACK.getDescription());
+        assertEquals(trackCommand.description(), CommandDescription.TRACK.getDescription());
     }
-
 
 }

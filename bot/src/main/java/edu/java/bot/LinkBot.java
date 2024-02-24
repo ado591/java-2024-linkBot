@@ -9,12 +9,14 @@ import edu.java.bot.commands.Command;
 import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.services.UserMessageProcessor;
 import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Objects;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import java.util.List;
-import java.util.Objects;
+
+
 
 @Component
 public class LinkBot extends TelegramBot {

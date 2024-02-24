@@ -1,12 +1,11 @@
 package edu.java.bot.services;
 
-import org.springframework.stereotype.Component;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.regex.Pattern;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import org.springframework.stereotype.Component;
 
 @Component
 @SuppressWarnings("checkstyle:MemberName")
