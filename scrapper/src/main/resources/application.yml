@@ -7,9 +7,19 @@ app:
 spring:
   application:
     name: scrapper
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgresql:5432/scrapper
+    username: postgres
+    password: postgres
+
 
 server:
   port: 8080
 
 logging:
   config: classpath:log4j2-plain.xml
+
+clients:
+  stackoverflow: https://api.stackexchange.com/2.3
+  github: https://api.github.com
